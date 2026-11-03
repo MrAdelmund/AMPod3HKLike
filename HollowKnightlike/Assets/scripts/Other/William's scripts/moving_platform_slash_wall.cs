@@ -12,6 +12,7 @@ public class moving_platform_slash_wall : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
         Vector3 start_pos = transform.position;
         end_pos = start_pos.x - distance;
     }

@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Enemy_health : MonoBehaviour
 {
-    public Playerattack PlayerattackScript;
+    //public Playerattack PlayerattackScript;
     public int chance_of_drop = 50;
     public int health = 2;
     public GameObject healing;
@@ -15,7 +15,7 @@ public class Enemy_health : MonoBehaviour
         {
             Debug.Log("Ouch!");
             //Subtracts amount from health if said check comes out true.
-            health -= PlayerattackScript.damage;
+            //health -= PlayerattackScript.damage;
             //If enemy health gets too low, destroy them.
             if(health <= 0)
             {
