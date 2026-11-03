@@ -97,7 +97,15 @@ public class PlayerMovement : MonoBehaviour
     void CheckWall()
     {
         touchingWallLeft = Physics2D.Raycast(wallCheckLeft.position, Vector2.left, wallCheckDistance, groundLayer);
-        touchingWallRight = Physics2D.Raycast(wallCheckRight.position, Vector2.right, wallCheckDistance, groundLayer);
+        touchingWallRight = Physics2D.Raycast(wallCheckRight.position, Vector2.right, wallCheckDistance, groundLayer); 
+        if(touchingWallLeft == true || touchingWallRight == true)
+        {
+            isTouchingWall = true;
+        }
+        else
+        {
+            isTouchingWall = false;
+        }
     }
 
 
