@@ -1,0 +1,19 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class MainMenu : MonoBehaviour
+{
+    public string LevelToLoad;
+public void StartGame()
+{
+    SceneManager.LoadScene(LevelToLoad);
+}
+
+public void Exit()
+{
+    print("quit the game");
+    Application.Quit();
+}
+}
+
+
