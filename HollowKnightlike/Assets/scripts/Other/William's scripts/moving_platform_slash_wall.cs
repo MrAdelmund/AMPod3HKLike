@@ -77,7 +77,7 @@ public class moving_platform_slash_wall : MonoBehaviour
         else
         {
             //Checks the dirrection and if it has meet the start position.
-            if (transform.position.x < start_pos.x && dirrection == "Left")
+            if (transform.position.x <= start_pos.x && dirrection == "Left")
             {
                 //Changes the position every frame.
                 transform.position += new Vector3(speed, start_pos.y, start_pos.z);
@@ -87,26 +87,26 @@ public class moving_platform_slash_wall : MonoBehaviour
                     finished = false;
                 }
             }
-            else if (transform.position.x > start_pos.x && dirrection == "Right")
+            else if (transform.position.x >= start_pos.x && dirrection == "Right")
             {
                 transform.position += new Vector3(-speed, start_pos.y, start_pos.z);
-                if (transform.position.x < start_pos.x)
+                if (transform.position.x <= start_pos.x)
                 {
                     finished = false;
                 }
             }
-            else if (transform.position.y < start_pos.y && dirrection == "Down")
+            else if (transform.position.y <= start_pos.y && dirrection == "Down")
             {
                 transform.position += new Vector3(start_pos.x, speed, start_pos.z);
-                if (transform.position.y > start_pos.y)
+                if (transform.position.y >= start_pos.y)
                 {
                     finished = false;
                 }
             }
-            else if (transform.position.y > start_pos.y && dirrection == "Up")
+            else if (transform.position.y >= start_pos.y && dirrection == "Up")
             {
                 transform.position += new Vector3(start_pos.x, -speed, start_pos.z);
-                if (transform.position.y < start_pos.y)
+                if (transform.position.y <= start_pos.y)
                 {
                     finished = false;
                 }
