@@ -7,17 +7,20 @@ public class Enemy_health : MonoBehaviour
     public int chance_of_drop = 50;
     public int health = 2;
     public GameObject healing;
+    public PlayerAttack playerAttack_script;
+    public Damage damage_script;
     //This detects enemys colliding with an object marked as trigger.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //This checks if said object is a bullet.
-        if(collision.gameObject.tag == "Bullet")
+        if(collision.gameObject.tag == "Bullet" && playerAttack_script.isAttacking == true)
         {
             Debug.Log("Ouch!");
+            health -= damage_script.player_damage;
             //Subtracts amount from health if said check comes out true.
             //health -= PlayerattackScript.damage;
             //If enemy health gets too low, destroy them.
-            if(health <= 0)
+            if (health <= 0)
             {
                 //Rolls the chance of an item drop.
                 int drop_chance = Random.Range(1, 101);
