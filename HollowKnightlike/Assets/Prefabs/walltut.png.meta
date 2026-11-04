@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 74cdfd45dccdd1044b5df54f2c71e460
+guid: 854f3a823f052794d8f50a51646b422d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -685630598450486675
-    second: BlueButton_0
+      213: 1606095306218739501
+    second: walltut_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BlueButton_0
+      name: walltut_0
       rect:
         serializedVersion: 2
-        x: 266
-        y: 730
-        width: 1468
-        height: 540
+        x: 59
+        y: 0
+        width: 889
+        height: 968
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6268347a962c76f0800000000000000
-      internalID: -685630598450486675
+      spriteID: d27179aeb2ff94610800000000000000
+      internalID: 1606095306218739501
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BlueButton_0: -685630598450486675
+      walltut_0: 1606095306218739501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

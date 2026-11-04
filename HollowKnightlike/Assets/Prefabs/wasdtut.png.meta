@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c485dfb58ede49347bb191413a9b683e
+guid: f437d01051d0d8b42b79a4b8493111b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 69246238096857660
-    second: PinkButton_0
+      213: 7893313739780280896
+    second: wasdtut_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PinkButton_0
+      name: wasdtut_0
       rect:
         serializedVersion: 2
-        x: 266
-        y: 730
-        width: 1468
-        height: 540
+        x: 59
+        y: 0
+        width: 889
+        height: 968
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3a9bcf261306f000800000000000000
-      internalID: 69246238096857660
+      spriteID: 0425058960faa8d60800000000000000
+      internalID: 7893313739780280896
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      PinkButton_0: 69246238096857660
+      wasdtut_0: 7893313739780280896
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
