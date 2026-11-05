@@ -21,6 +21,7 @@ public class Player_health : MonoBehaviour
             if(health < 0)
             {
                 health = 0;
+                text.text = "Health: " + health + "/" + max_health;
             }
             //Restarts scene if check pass.
             Debug.Log("You lost!");
