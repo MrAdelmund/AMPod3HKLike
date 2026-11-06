@@ -2056,7 +2056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Death_Screen
   player_Health_script: {fileID: 634729438}
-  restarts: 1
+  restarts: 0
   enabled_boolean: 1
 --- !u!1 &1315285263
 GameObject:
