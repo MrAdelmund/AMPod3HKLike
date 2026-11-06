@@ -214,10 +214,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::moving_platform_slash_wall
   dirrection: Up
-  speed: 2
+  speed: 4
   distance: 20
   paused: 0
-  delay: 500
+  delay: 400
   Locate_Starting_Platform: {fileID: 1620519197}
 --- !u!212 &312630866
 SpriteRenderer:
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 424937919}
   m_Layer: 0
   m_Name: obstacle
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
