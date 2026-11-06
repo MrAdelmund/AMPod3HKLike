@@ -34,7 +34,7 @@ public class EnemyChase : MonoBehaviour
             //player gets too close to the enemy
             home = false;
             chaseDirection.Normalize();
-            GetComponent<Rigidbody2D>().velocity = chaseDirection * chaseSpeed;
+            GetComponent<Rigidbody2D>().linearVelocity = chaseDirection * chaseSpeed;
         }
         else if (home == false)
         {
@@ -44,13 +44,13 @@ public class EnemyChase : MonoBehaviour
             {
                 //we've arrived home
                 home = true;
-                GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+                GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
             }
             else
             {
                 //go home
                 homeDirection.Normalize();
-                GetComponent<Rigidbody2D>().velocity = homeDirection * chaseSpeed;
+                GetComponent<Rigidbody2D>().linearVelocity = homeDirection * chaseSpeed;
             }
         }
         else
@@ -63,7 +63,7 @@ public class EnemyChase : MonoBehaviour
                 paceDirection = -displacement;
             }
             paceDirection.Normalize();
-            GetComponent<Rigidbody2D>().velocity = paceDirection * chaseSpeed;
+            GetComponent<Rigidbody2D>().linearVelocity = paceDirection * chaseSpeed;
         }
     }
 }

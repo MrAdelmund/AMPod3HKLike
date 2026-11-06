@@ -16,8 +16,8 @@ public class EnemyAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = rb2d.velocity.x;
-        float y = rb2d.velocity.y;
+        float x = rb2d.linearVelocity.x;
+        float y = rb2d.linearVelocity.y;
         animator.SetFloat("x", x);
         animator.SetFloat("y", y);
     }
