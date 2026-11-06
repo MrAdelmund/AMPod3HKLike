@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cde770f10c70824db2a3ff8474fede2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_attack
-  damage: 4
+  damage: 50000
   text: {fileID: 830769742}
   Player_healthScript: {fileID: 634729438}
 --- !u!61 &37929586
