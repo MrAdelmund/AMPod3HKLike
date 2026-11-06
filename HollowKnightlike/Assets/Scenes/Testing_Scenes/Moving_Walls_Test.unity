@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::moving_platform_slash_wall
   dirrection: Left
-  speed: 1
+  speed: 2.1474836e+9
   distance: 12
   paused: 0
   delay: 400

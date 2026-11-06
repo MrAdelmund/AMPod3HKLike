@@ -51,9 +51,10 @@ public class moving_platform_slash_wall : MonoBehaviour
             {
                 //Changes the position every frame.
                 transform.position += new Vector3(-speed, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
-                //Checks if it has meet the end position and if so reverses the motion and sets the timer.
-                if (transform.position.x < end_pos)
+                //Checks if it has meet the end position and if so sets it to it's ending pos, reverses the motion, and sets the timer.
+                if (transform.position.x <= end_pos)
                 {
+                    transform.position = new Vector3(end_pos, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
                     finished = true;
                     timer = delay;
                 }
@@ -61,8 +62,9 @@ public class moving_platform_slash_wall : MonoBehaviour
             else if(dirrection == "Right" && transform.position.x <= end_pos)
             {
                 transform.position += new Vector3(speed, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
-                if (transform.position.x > end_pos)
+                if (transform.position.x >= end_pos)
                 {
+                    transform.position = new Vector3(end_pos, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
                     finished = true;
                     timer = delay;
                 }
@@ -70,8 +72,9 @@ public class moving_platform_slash_wall : MonoBehaviour
             else if (dirrection == "Down" && transform.position.y >= end_pos)
             {
                 transform.position += new Vector3(Locate_Starting_Platform.start_pos.x, -speed, Locate_Starting_Platform.start_pos.z);
-                if (transform.position.y < end_pos)
+                if (transform.position.y <= end_pos)
                 {
+                    transform.position = new Vector3(Locate_Starting_Platform.start_pos.x, end_pos, Locate_Starting_Platform.start_pos.z);
                     finished = true;
                     timer = delay;
                 }
@@ -79,8 +82,9 @@ public class moving_platform_slash_wall : MonoBehaviour
             else if (dirrection == "Up" && transform.position.y <= end_pos)
             {
                 transform.position += new Vector3(Locate_Starting_Platform.start_pos.x, speed, Locate_Starting_Platform.start_pos.z);
-                if (transform.position.y > end_pos)
+                if (transform.position.y >= end_pos)
                 {
+                    transform.position = new Vector3(Locate_Starting_Platform.start_pos.x, end_pos, Locate_Starting_Platform.start_pos.z);
                     finished = true;
                     timer = delay;
                 }
@@ -94,9 +98,10 @@ public class moving_platform_slash_wall : MonoBehaviour
             {
                 //Changes the position every frame.
                 transform.position += new Vector3(speed, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
-                //Checks if it has meet the start position and if so reverses the motion and sets the timer.
-                if (transform.position.x > Locate_Starting_Platform.start_pos.x)
+                //Checks if it has meet the start position and if so sets it to it's starting pos, reverses the motion, and sets the timer.
+                if (transform.position.x >= Locate_Starting_Platform.start_pos.x)
                 {
+                    transform.position = new Vector3(Locate_Starting_Platform.start_pos.x, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
                     finished = false;
                     timer = delay;
                 }
@@ -106,6 +111,7 @@ public class moving_platform_slash_wall : MonoBehaviour
                 transform.position += new Vector3(-speed, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
                 if (transform.position.x <= Locate_Starting_Platform.start_pos.x)
                 {
+                    transform.position = new Vector3(Locate_Starting_Platform.start_pos.x, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
                     finished = false;
                     timer = delay;
                 }
@@ -115,6 +121,7 @@ public class moving_platform_slash_wall : MonoBehaviour
                 transform.position += new Vector3(Locate_Starting_Platform.start_pos.x, speed, Locate_Starting_Platform.start_pos.z);
                 if (transform.position.y >= Locate_Starting_Platform.start_pos.y)
                 {
+                    transform.position = new Vector3(Locate_Starting_Platform.start_pos.x, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
                     finished = false;
                     timer = delay;
                 }
@@ -124,6 +131,7 @@ public class moving_platform_slash_wall : MonoBehaviour
                 transform.position += new Vector3(Locate_Starting_Platform.start_pos.x, -speed, Locate_Starting_Platform.start_pos.z);
                 if (transform.position.y <= Locate_Starting_Platform.start_pos.y)
                 {
+                    transform.position = new Vector3(Locate_Starting_Platform.start_pos.x, Locate_Starting_Platform.start_pos.y, Locate_Starting_Platform.start_pos.z);
                     finished = false;
                     timer = delay;
                 }
