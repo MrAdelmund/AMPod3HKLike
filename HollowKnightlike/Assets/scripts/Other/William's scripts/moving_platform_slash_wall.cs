@@ -43,8 +43,8 @@ public class moving_platform_slash_wall : MonoBehaviour
         {
             timer -= 1;
         }
-        //Checks if it is moving forward or backwards, the timer is up and if it is paused.
-        if(finished == false && paused == false && timer == 0)
+        //Checks if it is moving forward or backwards, the timer is up, that the game is playing, and if it is paused.
+        if(finished == false && paused == false && timer == 0 && Time.timeScale > 0)
         {
             //Checks the dirrection and if it has meet the end position.
             if (dirrection == "Left" && transform.position.x >= end_pos)
@@ -86,8 +86,8 @@ public class moving_platform_slash_wall : MonoBehaviour
                 }
             }
         }
-        //Checks if it is paused and if the timer is up.
-        else if(paused == false && timer == 0)
+        //Checks if it is paused, that the game is playing, and if the timer is up.
+        else if (paused == false && timer == 0 && Time.timeScale > 0)
         {
             //Checks the dirrection and if it has meet the start position.
             if (transform.position.x <= Locate_Starting_Platform.start_pos.x && dirrection == "Left")
