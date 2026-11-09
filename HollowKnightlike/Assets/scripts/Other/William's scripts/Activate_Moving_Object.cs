@@ -15,14 +15,17 @@ public class Activate_Moving_Object : MonoBehaviour
     {
         
     }
+    //Checks if the player is touching the trigger.
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //If it unpauses the object will start moving.
         if(unpauses == true)
         {
             moving_Platform_Slash_Wall_script.paused = false;
         }
         else
         {
+            //If it pauses the object will stop moving.
             moving_Platform_Slash_Wall_script.paused = true;
         }
     }
