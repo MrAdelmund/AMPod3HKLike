@@ -18,4 +18,16 @@ public class Enemy_attack : MonoBehaviour
             text.text = "Health: " + Player_healthScript.health + "/" + Player_healthScript.max_health;
         }
     }
+    //This detects enemeies colliding with an object.
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //This checks if said object is the player.
+        if (collision.gameObject.tag == "Player")
+        {
+            //Subtracts amount from player health if said check comes out true.
+            Debug.Log("I hit an ememy!");
+            Player_healthScript.health -= damage;
+            text.text = "Health: " + Player_healthScript.health + "/" + Player_healthScript.max_health;
+        }
+    }
 }
