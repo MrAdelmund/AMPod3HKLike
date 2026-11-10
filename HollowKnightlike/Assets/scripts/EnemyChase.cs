@@ -8,62 +8,79 @@ public class EnemyChase : MonoBehaviour
 {
 
     public GameObject player;
+    public GameObject the_chase_radius;
     public float chaseSpeed = 2.0f;
     public float chaseTriggerDistance = 3.0f;
-    private Vector3 startPosition;
+    public Vector3 startPosition;
     private bool home = true;
-    public Vector3 paceDirection = new Vector3(0f, 0f, 0f);
+    //-1 == left, 1 == right.
+    public int direction = 1;
     public float paceDistance = 3.0f;
     // Use this for initialization
     void Start()
     {
-        //get the spawn position so we know how to get home
-        startPosition = transform.position;
-        player = GameObject.FindGameObjectWithTag("Player");
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 playerPosition = player.transform.position;
-        Vector2 chaseDirection = new Vector2(playerPosition.x - transform.position.x,
-                                                transform.position.y);
-        if (chaseDirection.magnitude < chaseTriggerDistance)
+        if (direction == 1)
         {
-            //player gets too close to the enemy
-            home = false;
-            chaseDirection.Normalize();
-            GetComponent<Rigidbody2D>().linearVelocity = chaseDirection * chaseSpeed;
-        }
-        else if (home == false)
-        {
-            Vector2 homeDirection = new Vector2(startPosition.x - transform.position.x,
-                                        transform.position.y);
-            if (homeDirection.magnitude < 0.3f)
-            {
-                //we've arrived home
-                home = true;
-                GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
-            }
-            else
-            {
-                //go home
-                homeDirection.Normalize();
-                GetComponent<Rigidbody2D>().linearVelocity = homeDirection * chaseSpeed;
-            }
+            transform.position = new Vector3(transform.position.x + chaseSpeed, transform.position.y, 0f);
         }
         else
         {
-            Vector3 displacement = transform.position - startPosition;
-            float distanceFromStart = displacement.magnitude;
-            if (distanceFromStart >= paceDistance)
+            transform.position = new Vector3(transform.position.x - chaseSpeed, transform.position.y, 0f);
+        }
+        Vector3 playerPosition = player.transform.position;
+        Vector2 chaseDirection = new Vector2(playerPosition.x - transform.position.x, transform.position.y);
+        if ((Mathf.Abs(transform.position.x) - Mathf.Abs(player.transform.position.x)) <= chaseTriggerDistance)
+        {
+            //player gets too close to the enemy
+            home = false;
+            if(player.transform.position.x > transform.position.x)
             {
-                //do stuff, we've gone too far
-                paceDirection = -displacement;
+                direction = 1;
+            }else if(player.transform.position.x < transform.position.x)
+            {
+                direction = -1;
             }
-            paceDirection.Normalize();
-            GetComponent<Rigidbody2D>().linearVelocity = paceDirection * chaseSpeed;
+        }
+        else if (home == false)
+        {
+            if (startPosition.x > transform.position.x)
+            {
+                direction = 1;
+            }
+            else if (startPosition.x < transform.position.x)
+            {
+                direction = -1;
+            }
+            //if (homeDirection.magnitude < 0.3f)
+            //{
+            //    //we've arrived home
+            //    home = true;
+            //    GetComponent<Rigidbody2D>().linearVelocity = new Vector2(0, 0);
+            //}
+            //else
+            //{
+            //    //go home
+            //    homeDirection.Normalize();
+            //    GetComponent<Rigidbody2D>().linearVelocity = homeDirection * chaseSpeed;
+            //}
+        }
+        else
+        {
+            //Vector3 displacement = transform.position - startPosition;
+            //float distanceFromStart = displacement.magnitude;
+            //if (distanceFromStart >= paceDistance)
+            //{
+                //do stuff, we've gone too far
+                //paceDirection = -displacement;
+            //}
+            //paceDirection.Normalize();
+            //GetComponent<Rigidbody2D>().linearVelocity = paceDirection * chaseSpeed;
         }
     }
 }
