@@ -1634,6 +1634,7 @@ MonoBehaviour:
   player_Health_script: {fileID: 1840418716}
   restarts: 0
   enabled_boolean: 1
+  LevelToLoad: MainMenu
 --- !u!114 &1274959696
 MonoBehaviour:
   m_ObjectHideFlags: 0

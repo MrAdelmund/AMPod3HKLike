@@ -6,6 +6,7 @@ public class Death_Screen : MonoBehaviour
     public Player_health player_Health_script;
     public bool restarts = false;
     public bool enabled_boolean = true;
+    public string LevelToLoad;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -34,6 +35,6 @@ public class Death_Screen : MonoBehaviour
     }
     public void OnMainMenu()
     {
-
+        SceneManager.LoadScene(LevelToLoad);
     }
 }
