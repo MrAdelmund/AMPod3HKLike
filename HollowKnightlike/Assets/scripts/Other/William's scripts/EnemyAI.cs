@@ -4,6 +4,8 @@ using UnityEngine;
 using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
+    public bool grounded_enemy = true;
+    public Enemy_grounded enemy_Grounded_script;
     [Header("Chase Settings")]
     public Transform target;
     public float chaseSpeed = 200f;
@@ -48,21 +50,24 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(path == null)
+        if(enemy_Grounded_script.isGrounded == true || grounded_enemy == false)
         {
-            return;
+            if(path == null)
+            {
+                return;
+            }
+	    	ChooseTarget();
+            if(currentWaypoint >= path.vectorPath.Count)
+            {
+                reachedEndOfPath = true;
+                return;
+            }
+            else
+            {
+                reachedEndOfPath = false;
+            }
+            ChaseTarget();
         }
-		ChooseTarget();
-        if(currentWaypoint >= path.vectorPath.Count)
-        {
-            reachedEndOfPath = true;
-            return;
-        }
-        else
-        {
-            reachedEndOfPath = false;
-        }
-        ChaseTarget();
     }
     void ChooseTarget()
     {
