@@ -1935,7 +1935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 466637329}
   m_Layer: 3
-  m_Name: Enemy_Ground_1
+  m_Name: Enemy_Left_Ground_1
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1950,7 +1950,7 @@ Transform:
   m_GameObject: {fileID: 466637328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalPosition: {x: -0.5, y: -0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6501,6 +6501,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 466637329}
+  - {fileID: 1755463852}
   - {fileID: 1605735231}
   - {fileID: 1082283547}
   - {fileID: 272264653}
@@ -6594,12 +6595,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 517e4ca47b178ae4093364a5c83cfd5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_grounded
-  groundCheck: {fileID: 466637329}
+  groundCheck_left: {fileID: 466637329}
+  groundCheck_right: {fileID: 1755463852}
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   isGrounded: 0
+  isGrounded_left: 0
+  isGrounded_right: 0
 --- !u!1 &1399588514
 GameObject:
   m_ObjectHideFlags: 0
@@ -9148,6 +9152,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1755463851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1755463852}
+  m_Layer: 3
+  m_Name: Enemy_Right_Ground_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1755463852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755463851}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.5, y: -0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1389679214}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1760694889
 GameObject:
   m_ObjectHideFlags: 0
