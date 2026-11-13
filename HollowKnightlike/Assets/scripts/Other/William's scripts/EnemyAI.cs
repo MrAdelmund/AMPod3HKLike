@@ -4,6 +4,7 @@ using UnityEngine;
 using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
+    public bool enemy_enabled = false;
     public EnemyShoot EnemyShoot_script;
     public bool grounded_enemy = true;
     public Enemy_grounded enemy_Grounded_script;
@@ -51,7 +52,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(enemy_Grounded_script.isGrounded == true && EnemyShoot_script.is_shooting == false || grounded_enemy == false && EnemyShoot_script.is_shooting == false)
+        if(enemy_enabled == true && enemy_Grounded_script.isGrounded == true && EnemyShoot_script.is_shooting == false || enemy_enabled == true && grounded_enemy == false && EnemyShoot_script.is_shooting == false)
         {
             if(path == null)
             {
