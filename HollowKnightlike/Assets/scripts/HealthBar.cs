@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +28,15 @@ public class HealthBar : MonoBehaviour
             float tempMaxHP = playerHealth_script.max_health;
             healthBar.fillAmount = tempHP / tempMaxHP;
 
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Heal")
+        {
+            float tempHP = playerHealth_script.health;
+            float tempMaxHP = playerHealth_script.max_health;
+            healthBar.fillAmount = tempMaxHP/tempHP;
         }
     }
 }
