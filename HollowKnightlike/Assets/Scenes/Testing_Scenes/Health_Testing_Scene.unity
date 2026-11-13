@@ -1291,7 +1291,6 @@ MonoBehaviour:
   player_Health_script: {fileID: 634729438}
   restarts: 0
   enabled_boolean: 1
-  LevelToLoad: 
 --- !u!114 &1315285265 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6181539046803186730, guid: e859a93f5f246e84189ff3a1697e5cc4, type: 3}
@@ -1317,7 +1316,7 @@ GameObject:
   - component: {fileID: 1444220828}
   m_Layer: 0
   m_Name: Healing
-  m_TagString: Untagged
+  m_TagString: Heal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
