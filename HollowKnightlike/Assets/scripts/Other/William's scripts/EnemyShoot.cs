@@ -11,6 +11,8 @@ public class EnemyShoot : MonoBehaviour
     //how close the player has to be for the enemy to shoot at them
     public float shootTriggerDistance = 4;
     float timer = 0;
+    public int bullet_life = 10;
+    public bool is_shooting = false;
     //player reference
     GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,6 +35,7 @@ public class EnemyShoot : MonoBehaviour
             Vector3 shootDir = player.transform.position - transform.position;
             if (shootDir.magnitude < shootTriggerDistance)
             {
+                is_shooting = true;
                 timer = 0;
                 //we have waited long enough to shoot
                 //we spawn the bullet
@@ -41,8 +44,12 @@ public class EnemyShoot : MonoBehaviour
                 shootDir.Normalize();
                 //push the bullet in the shoot direction, scaled up by the speed
                 shot.GetComponent<Rigidbody2D>().linearVelocity = shootDir * bulletSpeed;
-                Destroy(shot, 10);
+                Destroy(shot, bullet_life);
             }
+        }
+        else
+        {
+            is_shooting = false;
         }
 
     }
