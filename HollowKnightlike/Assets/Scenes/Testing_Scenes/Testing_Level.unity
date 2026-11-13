@@ -1545,10 +1545,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy_health
   chance_of_drop: 100
-  health: 2
+  health: 1
   healing: {fileID: 645773907}
   playerAttack_script: {fileID: 572539815}
   damage_script: {fileID: 572539811}
+  delay: 0
+  timer: 0
 --- !u!61 &310752746
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2431,7 +2433,7 @@ Transform:
   m_GameObject: {fileID: 572539809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 212.767, y: 13.021, z: 0}
+  m_LocalPosition: {x: -5.2, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4030,7 +4032,6 @@ MonoBehaviour:
   player_Health_script: {fileID: 572539812}
   restarts: 0
   enabled_boolean: 1
-  LevelToLoad: 
 --- !u!114 &880597352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6340,6 +6341,8 @@ MonoBehaviour:
   healing: {fileID: 0}
   playerAttack_script: {fileID: 572539815}
   damage_script: {fileID: 572539811}
+  delay: 0
+  timer: 0
 --- !u!114 &1389679210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6533,6 +6536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b691d0c673c16c42af2f6706c8b859c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  EnemyShoot_script: {fileID: 0}
   grounded_enemy: 1
   enemy_Grounded_script: {fileID: 1389679220}
   target: {fileID: 572539810}
