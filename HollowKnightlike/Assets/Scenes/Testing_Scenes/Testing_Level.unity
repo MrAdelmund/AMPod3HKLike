@@ -3471,7 +3471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec47c138071d15418fd446ddce3bb02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttack
-  attackDamage: 1
+  attackDamage: 4
   attackRange: 0.8
   attackCooldown: 0.3
   attackPoint: {fileID: 2094487582}
@@ -12800,7 +12800,7 @@ GameObject:
   - component: {fileID: 1389679219}
   - component: {fileID: 1389679220}
   - component: {fileID: 1389679221}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Test_Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -12824,7 +12824,7 @@ MonoBehaviour:
   healing: {fileID: 0}
   playerAttack_script: {fileID: 572539815}
   damage_script: {fileID: 572539811}
-  delay: 0
+  delay: 8
   timer: 0
 --- !u!114 &1389679210
 MonoBehaviour:
