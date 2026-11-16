@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 13744619}
   m_Layer: 0
   m_Name: Partical_Creator
-  m_TagString: Untagged
+  m_TagString: Particle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   partical: {fileID: 2031408134}
   life_time: 10
   timer: 0
-  delay: 4
+  delay: 20
 --- !u!50 &13744620
 Rigidbody2D:
   serializedVersion: 5
@@ -3387,7 +3387,7 @@ Transform:
   m_GameObject: {fileID: 572539809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 262.12, y: 13.96, z: 0}
+  m_LocalPosition: {x: 264.6, y: 13.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4258,7 +4258,7 @@ GameObject:
   - component: {fileID: 747368699}
   - component: {fileID: 747368698}
   - component: {fileID: 747368697}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Ground_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7959,7 +7959,6 @@ GameObject:
   - component: {fileID: 1389679211}
   - component: {fileID: 1389679210}
   - component: {fileID: 1389679209}
-  - component: {fileID: 1389679215}
   - component: {fileID: 1389679218}
   - component: {fileID: 1389679216}
   - component: {fileID: 1389679219}
@@ -8158,20 +8157,6 @@ Transform:
   - {fileID: 272264653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1389679215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389679207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40282b84231bad8419ec6bb0fcfdfe1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyChase
-  position_x: 0
-  position_y: 0
 --- !u!114 &1389679216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12334,9 +12319,10 @@ GameObject:
   - component: {fileID: 2031408135}
   - component: {fileID: 2031408137}
   - component: {fileID: 2031408138}
+  - component: {fileID: 2031408139}
   m_Layer: 0
   m_Name: Rain
-  m_TagString: Untagged
+  m_TagString: Particle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12409,7 +12395,7 @@ Transform:
   m_GameObject: {fileID: 2031408134}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 278.17, y: -176.35, z: 0}
+  m_LocalPosition: {x: 277.5, y: -207.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12478,6 +12464,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &2031408139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031408134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ce78cb7279ef7418ba7baffd2083d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destroy_Particle
 --- !u!1 &2041342216
 GameObject:
   m_ObjectHideFlags: 0
