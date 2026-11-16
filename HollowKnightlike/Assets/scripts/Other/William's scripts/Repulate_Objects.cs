@@ -7,6 +7,9 @@ public class Repulate_Objects : MonoBehaviour
     public int timer = 0;
     public string the_tag;
     public bool object_exsists = false;
+    public int max_object_count = 10;
+    public int total_object_count = 0;
+    public bool is_maximum_object_count = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,19 +22,13 @@ public class Repulate_Objects : MonoBehaviour
         if(timer >= 0)
         {
             timer -= 1;
+            Debug.Log(timer);
         }
-        if(timer > 0 && object_exsists == false)
+        if(timer >= 0 && object_exsists == false && total_object_count < max_object_count || timer >= 0 && object_exsists == false && is_maximum_object_count == false)
         {
             GameObject new_object = Instantiate(the_object, transform.position, Quaternion.identity);
             object_exsists = true;
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == the_tag)
-        {
-            timer = delay;
-            object_exsists = false;
+            total_object_count += 1;
         }
     }
 }
