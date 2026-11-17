@@ -14,6 +14,9 @@ public class Enemy_health : MonoBehaviour
     public int timer = 0;
     public void Update()
     {
+        Debug.Log(health);
+        Debug.Log(playerAttack_script.isAttacking);
+        Debug.Log(timer);
         //reduces timer by one each frame, when it is equal to 0.
         if(timer > 0)
         {
