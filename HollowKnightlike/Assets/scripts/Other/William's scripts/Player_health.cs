@@ -1,8 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 public class Player_health : MonoBehaviour
 {
+    public Image healthBar;
     public int health = 70;
     //The Test object we want to update.
     public TMP_Text text;
@@ -47,11 +49,9 @@ public class Player_health : MonoBehaviour
             Debug.Log("I hit an ememy!");
             health -= enemyDamage;
             text.text = "Health: " + health + "/" + max_health;
+            float tempHP = health;
+            float tempMaxHP = max_health;
+            healthBar.fillAmount = tempHP / tempMaxHP;
         }
-
-
-
-
-
     }
 }

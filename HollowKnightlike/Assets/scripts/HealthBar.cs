@@ -36,7 +36,7 @@ public class HealthBar : MonoBehaviour
         {
             float tempHP = playerHealth_script.health;
             float tempMaxHP = playerHealth_script.max_health;
-            healthBar.fillAmount = tempMaxHP/tempHP;
+            healthBar.fillAmount = tempHP/tempMaxHP;
         }
     }
 }
