@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,12 +17,14 @@ public class Enemy_health : MonoBehaviour
         //reduces timer by one each frame, when it is equal to 0.
         if(timer > 0)
         {
+            Debug.Log("Timer - 1");
             timer -= 1;
         }
     }
     //This detects enemys colliding with an object marked as trigger.
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Trigger");
         //This checks if said object is a player attack object, that the player is atacking, and that the timer is 0.
         if(collision.gameObject.tag == "Bullet" && playerAttack_script.isAttacking == true && timer <= 0)
         {
@@ -35,6 +38,7 @@ public class Enemy_health : MonoBehaviour
                 //Rolls the chance of an item drop.
                 int drop_chance = Random.Range(1, 101);
                 //Destroys then enemy if health is less then or equal to 0.
+                Debug.Log("Dead");
                 Destroy(gameObject);
                 //Checks if drop chance is the chance of the item droping.
                 if(drop_chance <= chance_of_drop)
