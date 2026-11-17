@@ -20,6 +20,7 @@ public class healing_item : MonoBehaviour
             //If so, it destroys the healing item.
             Debug.Log("Healing item.");
             Destroy(gameObject);
+            //Updates the health bar.
             float tempHP = Player_healthScript.health;
             float tempMaxHP = Player_healthScript.max_health;
             healthBar.fillAmount = tempHP / tempMaxHP;

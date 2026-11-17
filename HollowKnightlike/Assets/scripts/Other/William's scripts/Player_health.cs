@@ -49,6 +49,7 @@ public class Player_health : MonoBehaviour
             Debug.Log("I hit an ememy!");
             health -= enemyDamage;
             text.text = "Health: " + health + "/" + max_health;
+            //Updates the health bar.
             float tempHP = health;
             float tempMaxHP = max_health;
             healthBar.fillAmount = tempHP / tempMaxHP;

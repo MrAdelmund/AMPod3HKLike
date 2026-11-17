@@ -13,10 +13,13 @@ public class Kill_Enemy : MonoBehaviour
     {
         
     }
+    //Detects if object is touching another object.
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Detects of that object is the death barrier.
         if(collision.gameObject.tag == "Death")
         {
+            //Destroys the object.
             Destroy(gameObject);
         }
     }
