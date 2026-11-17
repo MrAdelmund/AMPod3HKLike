@@ -25,6 +25,7 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
             isAttacking = true;
+            Debug.Log("attacking");
         }
 
         if(cooldownTimer <= 0)

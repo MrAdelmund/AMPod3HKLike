@@ -29,7 +29,7 @@ public class Enemy_health : MonoBehaviour
     {
         Debug.Log("Trigger");
         //This checks if said object is a player attack object, that the player is atacking, and that the timer is 0.
-        if(collision.gameObject.tag == "Bullet" && playerAttack_script.isAttacking == true && timer <= 0)
+        if(collision.gameObject.tag == "Bullet" && timer <= 0)
         {
             //Reduces enemy health and starts the timer.
             Debug.Log("Ouch!");
