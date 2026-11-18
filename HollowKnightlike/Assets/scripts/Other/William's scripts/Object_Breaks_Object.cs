@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Object_Breaks_Object : MonoBehaviour
 {
-    public GameObject the_destroying_object;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,7 +16,7 @@ public class Object_Breaks_Object : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject == the_destroying_object)
+        if(collision.gameObject.tag == "Object_Destroyer")
         {
             Debug.Log("break");
             Destroy(gameObject);
