@@ -138,7 +138,6 @@ GameObject:
   - component: {fileID: 5032732152489468212}
   - component: {fileID: 6380892668510890917}
   - component: {fileID: 7172384394431654687}
-  - component: {fileID: 2700436001475761781}
   - component: {fileID: 8570013158674841566}
   - component: {fileID: 3544012424660968683}
   - component: {fileID: 8322315378655120960}
@@ -337,20 +336,6 @@ MonoBehaviour:
   damage_script: {fileID: 935114669886725886, guid: 88c46c188ea13874e8566a1b93d641d9, type: 3}
   delay: 40
   timer: 0
---- !u!114 &2700436001475761781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4902565285081284623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40282b84231bad8419ec6bb0fcfdfe1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyChase
-  position_x: 0
-  position_y: 0
 --- !u!114 &8570013158674841566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,6 +376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b691d0c673c16c42af2f6706c8b859c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemy_enabled: 0
   EnemyShoot_script: {fileID: 1969958546140893112}
   grounded_enemy: 0
   enemy_Grounded_script: {fileID: 760960459670065031}

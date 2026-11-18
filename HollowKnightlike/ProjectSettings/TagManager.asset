@@ -10,6 +10,7 @@ TagManager:
   - Death
   - Bullet
   - Particle
+  - Object_Destroyer
   layers:
   - Default
   - TransparentFX
