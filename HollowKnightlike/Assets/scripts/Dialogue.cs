@@ -30,6 +30,7 @@ public class Dialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //allows the player to go to the next line of dialogue
         if (Input.GetKeyDown(KeyCode.Z))
         {
             if (textComponent.text == lines[index])
@@ -39,6 +40,7 @@ public class Dialogue : MonoBehaviour
             }
             else
             {
+                //dialogue box and text disappear if no more dialogue
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
