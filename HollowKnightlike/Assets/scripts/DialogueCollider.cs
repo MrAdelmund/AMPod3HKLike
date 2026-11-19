@@ -18,6 +18,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //allows dialogue box to appear if player is in the trigger zone
         if (other.CompareTag("Player"))
         {
             playerInRange = true;
@@ -27,6 +28,7 @@ public class DialogueSystem : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        //if player is out of the trigger zone the dialogue disappears
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
